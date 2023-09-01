@@ -8,11 +8,11 @@ import { motion } from 'framer-motion'
 import { useNavigate } from "react-router-dom";
 
 const navigation = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Hire a Caregivers', href: '#hcaregivers' },
-    { name: 'Caregivers', href: '#caregivers' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: 'home' },
+    { name: 'Services', href: 'services' },
+    { name: 'Hire a Caregivers', href: 'hcaregivers' },
+    { name: 'Caregivers', href: 'caregivers' },
+    { name: 'Contact', href: 'contact' },
 
 
 ]
@@ -29,15 +29,12 @@ const Navbar = () => {
             behavior: 'smooth' // Adds smooth scrolling animation
         });
     };
-    const updateUrl = () => {
-        // const newPath = '/login'; // Replace with the desired new path
-        // window.history.pushState({}, null, newPath);
-        navigate("#login")
-    };
+
 
     const handleClick = () => {
-        setMobileMenuOpen(false)
-        updateUrl()
+        scrollToTop()
+        setMobileMenuOpen(!mobileMenuOpen)
+
     }
 
     return (
@@ -45,7 +42,7 @@ const Navbar = () => {
             <header className="absolute inset-x-0 top-0 z-50">
                 <nav className="flex items-center justify-between bg-white shadow-md fixed w-full  p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
-                        <a href="#home" className="-m-1.5 p-1.5">
+                        <a href="/" className="-m-1.5 p-1.5">
                             <img
                                 className="h-14 w-20 "
                                 src={logo}
@@ -79,7 +76,7 @@ const Navbar = () => {
                     <div className="fixed inset-0 z-50" />
                     <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full  overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
-                            <a href="#logo" className="-m-1.5 p-1.5">
+                            <a href="/" className="-m-1.5 p-1.5">
 
                                 <img
                                     className="h-8 w-auto"
@@ -104,20 +101,12 @@ const Navbar = () => {
                                     ))}
                                 </div>
                                 <div className="py-6 flex flex-col gap-3">
-                                    <motion.button
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.8 }}
-                                        onClick={() => setMobileMenuOpen(false)}
-                                        className="  rounded-lg font-Poppins px-[20px] py-[5px] border-emerald-500 border-2
+                                    <button onClick={handleClick} className="  rounded-lg font-Poppins px-[20px] py-[5px] border-emerald-500 border-2
                                              text-emerald-500 hover:border-white hover:text-white hover:bg-gradient-to-r from-emerald-500
-                                             to-lime-300  first-letter:justify-center items-center   focus:outline-none focus:shadow-outline"><a href="#login" smooth>Login</a> </motion.button>
-                                    <motion.button
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.8 }}
-                                        onClick={handleClick}
-                                        className="  rounded-lg font-Poppins px-[20px] py-[5px] border-emerald-500 border-2
-                                             text-emerald-500 hover:border-white hover:text-white hover:bg-gradient-to-r from-emerald-500
-                                             to-lime-300  first-letter:justify-center items-center   focus:outline-none focus:shadow-outline"><Link smooth>Sign Up</Link> </motion.button>
+                                             to-lime-300  first-letter:justify-center items-center   focus:outline-none focus:shadow-outline"><Link to="/login">Login</Link></button>
+                                    <button onClick={handleClick}  className="  rounded-lg font-Poppins px-[20px] py-[5px] border-emerald-500 border-2
+                                                 text-emerald-500 hover:border-white hover:text-white hover:bg-gradient-to-r from-emerald-500
+                                                 to-lime-300  first-letter:justify-center items-center   focus:outline-none focus:shadow-outline"><Link to="/createaccount">Sign Up</Link></button>
 
                                 </div>
                             </div>

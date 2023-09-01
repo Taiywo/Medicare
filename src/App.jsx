@@ -13,6 +13,7 @@ import Footer from "./component/Footer";
 import Recovery from "./pages/Recovery";
 import Carerecieverreg from "../src/ReciverForm/CarerecieverReg";
 import Caregivers from "./pages/Caregivers";
+import Pagenotfound from "./pages/Pagenotfound";
 
 
 
@@ -36,6 +37,7 @@ const App = () => {
       <Route path="/carerecieverreg" element={<Carerecieverreg />} />
       <Route path="/recovery" element={<Recovery />} />
       <Route path="/caregivers" element={<Caregivers/>} />
+      <Route path="*" element={<Pagenotfound/>} />
       
 
     </Routes>

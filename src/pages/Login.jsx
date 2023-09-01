@@ -39,7 +39,7 @@ const Login = () => {
                         <h1 className="text-xl font-bold font-Paytone leading-tight tracking-tight text-emerald-900 md:text-2xl dark:text-white">
                             Welcome, Sign in to your account
                         </h1>
-                        <form className="space-y-4 md:space-y-6 font-Poppins" onSubmit={handleSubmit}>
+                        <form className="space-y-4 md:space-y-6 font-Poppins" >
                             <div>
                                 <label for="email" className="block mb-2 text-sm font-medium text-emerald-900 dark:text-white">Your email</label>
                                 <input type="email" name="email" id="email" className="bg-gray-50 border border-emerald-600 text-emerald-900 sm:text-sm rounded-lg focus:ring-emerald-800 focus:border-emerald-800 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="true" onChange={(e) => setEmail(e.target.value)} />

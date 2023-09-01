@@ -82,10 +82,10 @@ const Footer = () => {
                                     <a className="text-white" href='/services'>Services</a>
                                 </li >
                                 <li className='pb-2'>
-                                    <a className="text-white" href='/caregivers'>Caregivers</a>
+                                    <a className="text-white" href='/hcaregivers'>Hire a Caregiver</a>
                                 </li>
                                 <li className='pb-2'>
-                                    <a className="text-white" href='/about'>About</a>
+                                    <a className="text-white" href='/caregivers'>Caregiver</a>
                                 </li>
                                 <li className='pb-2'>
                                     <a className="text-white" href='/contact'>Contact</a>

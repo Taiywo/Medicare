@@ -5,6 +5,7 @@ import Services from '../pages/Services'
 import Hirecaregivers from './Hirecaregivers'
 import Contact from '../pages/Contact'
 import Caregivers from './Caregivers'
+// import Headers from '../Dashboard/Headers'
 
 
 
@@ -15,10 +16,7 @@ const Home = () => {
         <Services/>
         <Hirecaregivers/>
        <Caregivers/>
-        <Contact/>
-      
-      
-        
+        <Contact/>    
     </div>
   )
 }
